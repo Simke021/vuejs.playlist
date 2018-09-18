@@ -1,6 +1,7 @@
 # vuejs-playlist
 
 > Simple project using vue.js
+> vue init webpack-simple vuejs-playlist
 
 ## Build Setup
 
