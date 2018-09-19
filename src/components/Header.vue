@@ -16,6 +16,7 @@ export default {
 header {
   background: lightgreen;
   padding: 10px;
+  border-bottom: 3px solid #222;
 }
 h1 {
   color: #222;

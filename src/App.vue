@@ -1,7 +1,7 @@
 <template>
     <div>
         <app-header></app-header>
-        <app-main></app-main>
+        <app-main v-bind:ninjas="ninjas"></app-main>
         <app-footer></app-footer>
     </div>
 </template>
@@ -18,7 +18,16 @@ export default {
     "app-footer": Footer
   },
   data() {
-    return {};
+    return {
+      ninjas: [
+        { name: "Ryu", speciality: "Vue Components", show: false },
+        { name: "Crystal", speciality: "HTML Wizardry", show: false },
+        { name: "Hitoshi", speciality: "Click Events", show: false },
+        { name: "Tango", speciality: "Conditionals", show: false },
+        { name: "Kami", speciality: "Webpack", show: false },
+        { name: "Yoshi", speciality: "Data Diggin", show: false }
+      ]
+    };
   }
 };
 </script>
@@ -27,5 +36,6 @@ export default {
 body {
   margin: 0;
   font-family: "Nunito SemiBold";
+  background-color: #efefef;
 }
 </style>

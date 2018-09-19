@@ -1,26 +1,23 @@
 <template>
     <div id="ninjas">
-        <ul>
-            <li v-for="ninja in ninjas" :key = "ninja.id" v-on:click="ninja.show = !ninja.show">
-                <h2>{{ ninja.name }}</h2>
-                <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
-            </li>
-        </ul>
+      <ul>
+          <li v-for="ninja in ninjas" :key = "ninja.id" v-on:click="ninja.show = !ninja.show">
+              <h2>{{ ninja.name }}</h2>
+              <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
+          </li>
+      </ul>
     </div>
 </template>
 <script>
 export default {
+  props: {
+    ninjas: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
-    return {
-      ninjas: [
-        { name: "Ryu", speciality: "Vue Components", show: false },
-        { name: "Crystal", speciality: "HTML Wizardry", show: false },
-        { name: "Hitoshi", speciality: "Click Events", show: false },
-        { name: "Tango", speciality: "Conditionals", show: false },
-        { name: "Kami", speciality: "Webpack", show: false },
-        { name: "Yoshi", speciality: "Data Diggin", show: false }
-      ]
-    };
+    return {};
   }
 };
 </script>
@@ -31,6 +28,7 @@ export default {
   margin: 40px auto;
   padding: 0 20px;
   box-sizing: border-box;
+  filter: drop-shadow(8px 8px 5px gray);
 }
 ul {
   display: flex;
@@ -44,6 +42,7 @@ li {
   text-align: center;
   padding: 30px;
   border: 1px solid #222;
+  border-radius: 5px;
   margin: 10px;
 }
 h2 {
