@@ -24,6 +24,25 @@ export default {
     deleteNinja: function() {
       this.ninjas.pop();
     }
+  }, // lifecucles hooks
+  beforeCreate() {
+    alert("beforeCreate");
+  },
+  created() {
+    alert("Created");
+  },
+  beforeMount() {
+    alert("beforeMount");
+  },
+  mounted() {
+    alert("mounted");
+  },
+  // This is activate when you click on button
+  beforeUpdate() {
+    alert("beforeUpdate");
+  },
+  updated() {
+    alert("updated");
   }
 };
 </script>
